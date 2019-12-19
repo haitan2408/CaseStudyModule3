@@ -1,0 +1,95 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}
+ 
+mat-sidenav {
+    width: 15%;
+}
+ 
+main {
+    padding: 10px;
+}
+@import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
+@import "@material/select/mdc-select";
+
+.demo-width-class {
+  width: 400px;
+}
+.div-btn {
+    height: 10%;
+    margin-top: 5px;
+    text-align: center;
+}
+.btn-blue {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font-size: small;
+    background-color: #2A3F54;
+    color: white;
+    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.471
+}
+.div-btn :hover {
+    background-color: blue;
+}
+.btn-blue-menu-item :hover {
+    background-color: #81DAF5;
+}
+::ng-deep .mat-menu-panel {width: 100%!important; padding: 0 10px!important;} 
+.icon {
+    float: right; 
+    position: relative;
+    top: 10px;
+} 
+  .navigation-items {
+    list-style: none;
+    padding: 0;
+    margin-top: 2%;
+    margin-right: 2%;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover,
+  a:active {
+    color: lightgray;
+  }
+  
+  .iconToolbar {
+    display: inline-block;
+    height: 30px;
+    margin: 0 auto;
+    padding-right: 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 15%;
+  }
+  .vertical-menu {
+    background-color: #2A3F54 !important;
+}
+.custom-text {
+  margin-left: 5%;
+}
+.epic {
+  width: 15%;
+  height: 12%; 
+  /* thay man hinh thi set to len */
+  background-color: #2A3F54;
+  color: white;
+  font-size: 60px;
+  text-align: center;
+}
+.scrollHiden {
+  height: 88vh;
+  overflow: hidden;
+}
+.autoScroll {
+  overflow: auto;
+}

@@ -1,0 +1,118 @@
+<div class="wrapper">
+    <mat-card>
+        <p style="font-size: 30px; color:rgb(26, 78, 175); text-align:center; margin-top: 10px; ">Create Employee</p>
+        <mat-card-content>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegisters()">
+                <mat-form-field class="fullmanv-width">
+                    <input matInput placeholder="Mã nhân viên( format:NV-XXXX )" formControlName="maNV">
+                    <mat-error *ngFor="let validation of validation_messages.maNV">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('maNV').hasError(validation.type) && (registerForm.get('maNV').dirty || registerForm.get('maNV').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Họ và tên" formControlName="hoTen">
+                    <mat-error *ngFor="let validation of validation_messages.hoTen">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('hoTen').hasError(validation.type) && (registerForm.get('hoTen').dirty || registerForm.get('hoTen').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Vị Trí" formControlName="viTri">
+                    <mat-error *ngFor="let validation of validation_messages.viTri">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('viTri').hasError(validation.type) && (registerForm.get('viTri').dirty || registerForm.get('viTri').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Trình độ" formControlName="trinhDo">
+                    <mat-error *ngFor="let validation of validation_messages.trinhDo">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('trinhDo').hasError(validation.type) && (registerForm.get('trinhDo').dirty || registerForm.get('trinhDo').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Bộ phận" formControlName="boPhan">
+                    <mat-error *ngFor="let validation of validation_messages.boPhan">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('boPhan').hasError(validation.type) && (registerForm.get('boPhan').dirty || registerForm.get('boPhan').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput [matDatepicker]="ngaySinh" placeholder="Ngày sinh" formControlName="ngaySinh"
+                    [(ngModel)]="flightSchedule.date">
+                    <mat-error *ngFor="let validation of validation_messages.ngaySinh">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('ngaySinh').hasError(validation.type) && (registerForm.get('ngaySinh').dirty || registerForm.get('ngaySinh').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                    <mat-datepicker-toggle matSuffix [for]="ngaySinh"></mat-datepicker-toggle>
+                    <mat-datepicker #ngaySinh></mat-datepicker>
+
+                </mat-form-field>
+
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="CMND" formControlName="cmnd">
+                    <mat-error *ngFor="let validation of validation_messages.cmnd">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('cmnd').hasError(validation.type) && (registerForm.get('cmnd').dirty || registerForm.get('cmnd').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Lương" formControlName="luong">
+                    <mat-error *ngFor="let validation of validation_messages.luong">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('luong').hasError(validation.type) && (registerForm.get('luong').dirty || registerForm.get('luong').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Số điện thoại" formControlName="sdt">
+                    <mat-error *ngFor="let validation of validation_messages.sdt">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('sdt').hasError(validation.type) && (registerForm.get('sdt').dirty || registerForm.get('sdt').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-error *ngFor="let validation of validation_messages.email">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('email').hasError(validation.type) && (registerForm.get('email').dirty || registerForm.get('email').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Địa chỉ" formControlName="diaChi">
+                    <mat-error *ngFor="let validation of validation_messages.diaChi">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('diaChi').hasError(validation.type) && (registerForm.get('diaChi').dirty || registerForm.get('diaChi').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+
+                <!-- Button -->
+                <mat-card-actions>
+                    <button mat-raised-button style="border-radius: 20px" color="primary">Register</button>
+                </mat-card-actions>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

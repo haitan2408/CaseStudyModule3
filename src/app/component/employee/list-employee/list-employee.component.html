@@ -1,0 +1,57 @@
+<div class="mat-app-background basic-container">
+    <div fxLayout fxLayoutAlign="center center">
+        <mat-form-field>
+            <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+            <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+                <li>
+                    <button mat-button class="btn-create" [routerLink]="'/admin/employee/createEmployee'"
+                        color="primary"><i class="material-icons">add_circle_outline</i>Employee</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mat-elevation-z8">
+
+        <table mat-table [dataSource]="DataSource" matSort matSortStart="desc">
+            <ng-container matColumnDef="maNV">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Mã nhân viên  </th>
+                <td mat-cell *matCellDef="let element"> {{element.maNV}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="hoTen">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Họ và tên </th>
+                <td mat-cell *matCellDef="let element"> {{element.hoTen}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="viTri">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Vị trí </th>
+                <td mat-cell *matCellDef="let element"> {{element.viTri}} </td>
+            </ng-container>
+            <ng-container matColumnDef="boPhan">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Bộ phận </th>
+                <td mat-cell *matCellDef="let element"> {{element.boPhan}} </td>
+            </ng-container>
+            <ng-container matColumnDef="sdt">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Số điện thoại </th>
+                <td mat-cell *matCellDef="let element"> {{element.sdt}} </td>
+            </ng-container>
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Email </th>
+                <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef class="headerTable"> Action </th>
+                <td mat-cell *matCellDef="let element; let i = index;">
+                    <mat-icon (click)="updateEmployee(element.id)" class="action-button">edit</mat-icon>
+                    <mat-icon (click)="deleteEmployee(element.id)" class="action-button">delete_sweep</mat-icon>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSize]="2" [pageSizeOptions]="[2, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+<div>

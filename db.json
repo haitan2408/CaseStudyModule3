@@ -1,0 +1,337 @@
+{
+  "employees": [
+    {
+      "id": 2,
+      "maNV": "NV-0002",
+      "hoTen": "TrungDoan",
+      "viTri": "Tutor",
+      "trinhDo": "Dai hoc",
+      "boPhan": "Sale",
+      "ngaySinh": "2019-12-08T17:00:00.000Z",
+      "cmnd": "102160137",
+      "luong": 20000000,
+      "sdt": "0905345562",
+      "email": "trung.doan@gmail.com",
+      "diaChi": "Quang Nam"
+    },
+    {
+      "id": 3,
+      "maNV": "NV-0003",
+      "hoTen": "Kien",
+      "viTri": "Giam doc",
+      "trinhDo": "Dai hoc",
+      "boPhan": "marketing",
+      "ngaySinh": "28/10/1998",
+      "cmnd": "102160137",
+      "luong": 20000000,
+      "sdt": "0905345562",
+      "email": "kien.nguyen2810@gmail.com",
+      "diaChi": "Quang Nam"
+    },
+    {
+      "id": 4,
+      "maNV": "NV-0004",
+      "hoTen": "Hai",
+      "viTri": "Giam doc",
+      "trinhDo": "Dai hoc",
+      "boPhan": "Sale",
+      "ngaySinh": "28/10/1998",
+      "cmnd": "102160137",
+      "luong": 20000000,
+      "sdt": "0905345562",
+      "email": "haitan2810@gmail.com",
+      "diaChi": "Quang Nam"
+    },
+    {
+      "hoTen": "Trung",
+      "viTri": "Tutor",
+      "maNV": "NV-0002",
+      "trinhDo": "Dai hoc",
+      "boPhan": "Sale",
+      "ngaySinh": "2019-12-16T17:00:00.000Z",
+      "cmnd": "102160137",
+      "luong": 20000000,
+      "sdt": "0905345562",
+      "email": "trung.doan@gmail.com",
+      "diaChi": "Quang Nam",
+      "id": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": 2,
+      "maKH": "KH-0003",
+      "hoTen": "Trieu",
+      "loaiKhach": "Vip",
+      "ngaySinh": "2012-01-16T17:00:00.000Z",
+      "cmnd": "102160137",
+      "sdt": "0905345562",
+      "email": "hai.tan@gmail.com",
+      "diaChi": "Da Nang"
+    },
+    {
+      "id": 3,
+      "maKH": "KH-0004",
+      "hoTen": "Kien",
+      "loaiKhach": "Diamond",
+      "ngaySinh": "28/10/1998",
+      "cmnd": "102160137",
+      "sdt": "0905345562",
+      "email": "kien.nguyen@gmail.com",
+      "diaChi": "Quang Nam"
+    }
+  ],
+  "services": [
+    {
+      "id": 3,
+      "maDV": "DV-0003",
+      "tenDV": "House",
+      "dienTich": 20000,
+      "soTang": "9",
+      "maxPeople": 10,
+      "phiThue": 200000000,
+      "kieuThue": "tháng",
+      "trangThai": "none"
+    },
+    {
+      "tenDV": "Room",
+      "maDV": "DV-1233",
+      "dienTich": 123.3,
+      "soTang": "10",
+      "maxPeople": 12,
+      "phiThue": 12.3,
+      "kieuThue": "Năm",
+      "trangThai": "Trống",
+      "id": 4
+    }
+  ],
+  "contracts": [
+    {
+      "id": 1,
+      "maHD": "HD-1234",
+      "khachHang": {
+        "id": 2,
+        "maKH": "KH-0003",
+        "hoTen": "Trieu",
+        "loaiKhach": "Vip",
+        "ngaySinh": "2012-01-16T17:00:00.000Z",
+        "cmnd": "102160137",
+        "sdt": "0905345562",
+        "email": "hai.tan@gmail.com",
+        "diaChi": "Da Nang"
+      },
+      "nhanVien": {
+        "id": 2,
+        "maNV": "NV-0002",
+        "hoTen": "TrungDoan",
+        "viTri": "Tutor",
+        "trinhDo": "Dai hoc",
+        "boPhan": "Sale",
+        "ngaySinh": "2019-12-08T17:00:00.000Z",
+        "cmnd": "102160137",
+        "luong": 20000000,
+        "sdt": "0905345562",
+        "email": "trung.doan@gmail.com",
+        "diaChi": "Quang Nam"
+      },
+      "dichVu": {
+        "id": 3,
+        "maDV": "DV-0003",
+        "tenDV": "House",
+        "dienTich": 20000,
+        "soTang": "9",
+        "maxPeople": 10,
+        "phiThue": 200000000,
+        "kieuThue": "tháng",
+        "trangThai": "none"
+      },
+      "ngayLamHopDong": "23/12/2019",
+      "ngayKetThuc": "01/01/2020",
+      "tienDatCoc": 2000000,
+      "tongTien": 200000000
+    },
+    {
+      "maHD": "HD-1234",
+      "ngayLamHopDong": "2001-01-09T17:00:00.000Z",
+      "ngayKetThuc": "2019-12-16T17:00:00.000Z",
+      "nhanVien": {
+        "id": 3,
+        "maNV": "NV-0003",
+        "hoTen": "Kien",
+        "viTri": "Giam doc",
+        "trinhDo": "Dai hoc",
+        "boPhan": "marketing",
+        "ngaySinh": "28/10/1998",
+        "cmnd": "102160137",
+        "luong": 20000000,
+        "sdt": "0905345562",
+        "email": "kien.nguyen2810@gmail.com",
+        "diaChi": "Quang Nam"
+      },
+      "khachHang": {
+        "id": 3,
+        "maKH": "KH-0004",
+        "hoTen": "Kien",
+        "loaiKhach": "Diamond",
+        "ngaySinh": "28/10/1998",
+        "cmnd": "102160137",
+        "sdt": "0905345562",
+        "email": "kien.nguyen@gmail.com",
+        "diaChi": "Quang Nam"
+      },
+      "dichVu": {
+        "tenDV": "Room",
+        "maDV": "DV-1233",
+        "dienTich": 123.3,
+        "soTang": "10",
+        "maxPeople": 12,
+        "phiThue": 12.3,
+        "kieuThue": "Năm",
+        "trangThai": "Trống",
+        "id": 4
+      },
+      "tienDatCoc": "2",
+      "tongTien": "23343",
+      "id": 2
+    },
+    {
+      "maHD": "HD-1234",
+      "ngayLamHopDong": "2019-12-19",
+      "ngayKetThuc": "2019-12-17T17:00:00.000Z",
+      "nhanVien": {
+        "hoTen": "Trung",
+        "viTri": "Tutor",
+        "maNV": "NV-0002",
+        "trinhDo": "Dai hoc",
+        "boPhan": "Sale",
+        "ngaySinh": "2019-12-16T17:00:00.000Z",
+        "cmnd": "102160137",
+        "luong": 20000000,
+        "sdt": "0905345562",
+        "email": "trung.doan@gmail.com",
+        "diaChi": "Quang Nam",
+        "id": 5
+      },
+      "khachHang": {
+        "id": 3,
+        "maKH": "KH-0004",
+        "hoTen": "Kien",
+        "loaiKhach": "Diamond",
+        "ngaySinh": "28/10/1998",
+        "cmnd": "102160137",
+        "sdt": "0905345562",
+        "email": "kien.nguyen@gmail.com",
+        "diaChi": "Quang Nam"
+      },
+      "dichVu": {
+        "id": 3,
+        "maDV": "DV-0003",
+        "tenDV": "House",
+        "dienTich": 20000,
+        "soTang": "9",
+        "maxPeople": 10,
+        "phiThue": 200000000,
+        "kieuThue": "tháng",
+        "trangThai": "none"
+      },
+      "tienDatCoc": "21",
+      "tongTien": "2111111",
+      "id": 3
+    },
+    {
+      "maHD": "HD-1235",
+      "ngayLamHopDong": "19/12/2019",
+      "ngayKetThuc": "2019-12-19T17:00:00.000Z",
+      "nhanVien": {
+        "id": 2,
+        "maNV": "NV-0002",
+        "hoTen": "TrungDoan",
+        "viTri": "Tutor",
+        "trinhDo": "Dai hoc",
+        "boPhan": "Sale",
+        "ngaySinh": "2019-12-08T17:00:00.000Z",
+        "cmnd": "102160137",
+        "luong": 20000000,
+        "sdt": "0905345562",
+        "email": "trung.doan@gmail.com",
+        "diaChi": "Quang Nam"
+      },
+      "khachHang": {
+        "id": 3,
+        "maKH": "KH-0004",
+        "hoTen": "Kien",
+        "loaiKhach": "Diamond",
+        "ngaySinh": "28/10/1998",
+        "cmnd": "102160137",
+        "sdt": "0905345562",
+        "email": "kien.nguyen@gmail.com",
+        "diaChi": "Quang Nam"
+      },
+      "dichVu": {
+        "id": 3,
+        "maDV": "DV-0003",
+        "tenDV": "House",
+        "dienTich": 20000,
+        "soTang": "9",
+        "maxPeople": 10,
+        "phiThue": 200000000,
+        "kieuThue": "tháng",
+        "trangThai": "none"
+      },
+      "tienDatCoc": "21",
+      "tongTien": "12345444",
+      "id": 4
+    },
+    {
+      "maHDCT": "HDCT-1234",
+      "hopDong": {
+        "id": 1,
+        "maHD": "HD-1234",
+        "khachHang": {
+          "id": 2,
+          "maKH": "KH-0003",
+          "hoTen": "Trieu",
+          "loaiKhach": "Vip",
+          "ngaySinh": "2012-01-16T17:00:00.000Z",
+          "cmnd": "102160137",
+          "sdt": "0905345562",
+          "email": "hai.tan@gmail.com",
+          "diaChi": "Da Nang"
+        },
+        "nhanVien": {
+          "id": 2,
+          "maNV": "NV-0002",
+          "hoTen": "TrungDoan",
+          "viTri": "Tutor",
+          "trinhDo": "Dai hoc",
+          "boPhan": "Sale",
+          "ngaySinh": "2019-12-08T17:00:00.000Z",
+          "cmnd": "102160137",
+          "luong": 20000000,
+          "sdt": "0905345562",
+          "email": "trung.doan@gmail.com",
+          "diaChi": "Quang Nam"
+        },
+        "dichVu": {
+          "id": 3,
+          "maDV": "DV-0003",
+          "tenDV": "House",
+          "dienTich": 20000,
+          "soTang": "9",
+          "maxPeople": 10,
+          "phiThue": 200000000,
+          "kieuThue": "tháng",
+          "trangThai": "none"
+        },
+        "ngayLamHopDong": "23/12/2019",
+        "ngayKetThuc": "01/01/2020",
+        "tienDatCoc": 2000000,
+        "tongTien": 200000000
+      },
+      "dichVuDiKem": "Message",
+      "soLuong": "12",
+      "id": 5
+    }
+  ],
+  "contractDetails": []
+}

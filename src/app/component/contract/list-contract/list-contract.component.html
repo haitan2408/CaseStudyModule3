@@ -1,0 +1,64 @@
+<div class="mat-app-background basic-container">
+    <div fxLayout fxLayoutAlign="center center">
+        <mat-form-field>
+            <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+            <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+                <li>
+                    <button mat-button class="btn-create" [routerLink]="'/admin/contract/createContract'"
+                        color="primary"><i class="material-icons">add_circle_outline</i>Contract</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mat-elevation-z8">
+
+        <table mat-table [dataSource]="DataSource" matSort matSortStart="desc">
+            <ng-container matColumnDef="maHD">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Mã hợp đồng  </th>
+                <td mat-cell *matCellDef="let element"> {{element.maHD}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="nhanVien">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Nhân viên </th>
+                <td mat-cell *matCellDef="let element"> {{element.nhanVien.hoTen}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="khachHang">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Khách hàng </th>
+                <td mat-cell *matCellDef="let element"> {{element.khachHang.hoTen}} </td>
+            </ng-container>
+            <ng-container matColumnDef="dichVu">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Dịch vụ </th>
+                <td mat-cell *matCellDef="let element"> {{element.dichVu.tenDV}} </td>
+            </ng-container>
+            <ng-container matColumnDef="ngayLamHopDong">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Ngày làm hợp đồng </th>
+                <td mat-cell *matCellDef="let element"> {{element.ngayLamHopDong}} </td>
+            </ng-container>
+            <ng-container matColumnDef="ngayKetThuc">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Ngày kết thúc </th>
+                <td mat-cell *matCellDef="let element"> {{element.ngayKetThuc}} </td>
+            </ng-container>
+            <ng-container matColumnDef="tienDatCoc">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Tiền đặt cọc </th>
+                <td mat-cell *matCellDef="let element"> {{element.tienDatCoc}} </td>
+            </ng-container>
+            <ng-container matColumnDef="tongTien">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="headerTable"> Tổng tiền </th>
+                <td mat-cell *matCellDef="let element"> {{element.tongTien}} </td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef class="headerTable"> Action </th>
+                <td mat-cell *matCellDef="let element; let i = index;">
+                    <mat-icon (click)="deleteContract(element.id)" class="action-button">delete_sweep</mat-icon>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSize]="2" [pageSizeOptions]="[2, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+<div>

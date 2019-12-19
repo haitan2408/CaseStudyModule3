@@ -1,0 +1,63 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="epic" style="position: fixed;">
+    </mat-toolbar-row>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+            <li>
+                <mat-search-bar style="font-size: small;"></mat-search-bar>
+            </li>
+            <li>
+                <a [routerLink]="'/login'">
+                    <mat-icon class="iconToolbar">input</mat-icon>
+                    <span class="label">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</mat-toolbar>
+
+<mat-sidenav-container >
+    <mat-sidenav mode="side" opened [disableClose]="true" class="vertical-menu">
+        <div class="div-btn">
+            <button mat-raised-button mat-raised-button class="btn-blue" [routerLink]="'/admin/dashboard'">
+                <mat-icon>dashboard</mat-icon>
+                <span class="custom-text">Dashboard</span>
+            </button>
+        </div>
+        <div class="div-btn" color="#2A3F54">
+            <button mat-raised-button class="btn-blue" [routerLink]="'/admin/customer'"><i class="material-icons">list</i>
+                <span class="custom-text">Customer</span>
+            </button>
+        </div>
+        <div class="div-btn">
+            <button mat-raised-button mat-raised-button class="btn-blue" [routerLink]="'/admin/employee'">
+                <mat-icon>class</mat-icon>
+                <span class="custom-text">Employee</span>
+            </button>
+        </div>
+        <div class="div-btn">
+                <button mat-raised-button mat-raised-button class="btn-blue" [routerLink]="'/admin/service'">
+                    <mat-icon>menu_book</mat-icon>
+                    <span class="custom-text">Service</span>
+                </button>
+            </div>
+
+        <div class="div-btn">
+            <button mat-raised-button class="btn-blue" [routerLink]="'/admin/contract'"><i
+                    class="material-icons">add_circle_outline</i>
+                <span class="custom-text">Contract</span>
+            </button>
+        </div>
+        <div class="div-btn">
+            <button mat-raised-button class="btn-blue" [routerLink]="'/admin/contractDetail'"><i
+                    class="material-icons">add_circle_outline</i>
+                <span class="custom-text">Contract Detail</span>
+            </button>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

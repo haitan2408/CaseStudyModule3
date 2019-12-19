@@ -1,0 +1,53 @@
+<div class="wrapper">
+    <mat-card>
+        <p style="font-size: 30px; color:rgb(26, 78, 175); text-align:center; margin-top: 10px; ">Create Contract Detail
+        </p>
+        <mat-card-content>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegisters()">
+                <mat-form-field class="fullmanv-width">
+                    <input matInput placeholder="Mã hợp đồng chi tiết( format:HDCT-XXXX )" formControlName="maHDCT">
+                    <mat-error *ngFor="let validation of validation_messages.maHD">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('maHDCT').hasError(validation.type) && (registerForm.get('maHDCT').dirty || registerForm.get('maHDCT').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-select matInput placeholder="Hợp đồng" formControlName="hopDong" required>
+                        <mat-option *ngFor="let temp of hopDong" [value]="temp">
+                            {{ temp.maHD }}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngFor="let validation of validation_messages.hopDong">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('hopDong').hasError(validation.type) && (registerForm.get('hopDong').dirty || registerForm.get('hopDong').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Dịch vụ đi kèm" formControlName="dichVuDiKem">
+                    <mat-error *ngFor="let validation of validation_messages.dichVuDiKem">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('dichVuDiKem').hasError(validation.type) && (registerForm.get('dichVuDiKem').dirty || registerForm.get('dichVuDiKem').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Số lượng" formControlName="soLuong">
+                    <mat-error *ngFor="let validation of validation_messages.soLuong">
+                        <mat-error class="error-message"
+                            *ngIf="registerForm.get('soLuong').hasError(validation.type) && (registerForm.get('soLuong').dirty || registerForm.get('soLuong').touched)">
+                            {{validation.message}}</mat-error>
+                    </mat-error>
+                </mat-form-field>
+                <!-- Button -->
+                <mat-card-actions>
+                    <button mat-raised-button style="border-radius: 20px" color="primary">Create</button>
+                </mat-card-actions>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
